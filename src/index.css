@@ -36,18 +36,20 @@ h1, h2  {
 }
 
 label {
-  color: white;
+  color: #0a97b0;
+  font-size: 20px;
+  display: flex;
 }
+
 
 input[type="date"],
 input[type="time"] {
-  height: 38px;
+    height: 38px;
     padding: 6px 10px;
     background-color: #fff;
     border: 1px solid #D1D1D1;
     border-radius: 4px;
-    box-shadow: none;
-    box-sizing: border-box;
+    box-shadow: 2px;
 }
 
 .cita {

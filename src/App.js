@@ -1,10 +1,22 @@
 import React from 'react';
+import Form from './components/Form'
 
 function App() {
   return (
-    <div className="App">
-      <h2>Administrador de pacientes</h2>
-    </div>
+    <React.Fragment>
+      <h2>Administrador de pacientes
+      <div className='container'>
+        <div className='row'>
+          <div className='one-half column'>
+            <Form/>
+          </div>
+          <div className='one-half column'>
+            2
+          </div>
+        </div>
+      </div>
+      </h2>
+    </React.Fragment>
   );
 }
 
