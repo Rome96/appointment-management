@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 const Form = () => {
+
   const [quotes, setQuotes] = useState({
     hora: "",
     fecha: "",
@@ -8,8 +10,7 @@ const Form = () => {
     sintomas: "",
     propietario: "",
   });
-
-  const [error, setError] = useState(false)
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     setQuotes({
@@ -22,7 +23,6 @@ const Form = () => {
 
   // send form
   const submitQuotes = (e) => {
-
     e.preventDefault();
 
     //validate from
@@ -33,17 +33,21 @@ const Form = () => {
       sintomas.trim() === "" ||
       propietario.trim() === ""
     ) {
-      setError(true)
+      setError(true);
       return;
     }
+
+    setError(false);
+    quotes.id = uuidv4()
+    console.log(quotes)
   };
 
   return (
     <React.Fragment>
       <h2>Crear Citas</h2>
-      { 
-        error && <p className='error-text'>Todos los campos son obligatorios. </p> 
-      }
+      {error && (
+        <p className="error-text">Todos los campos son obligatorios. </p>
+      )}
       <form onSubmit={submitQuotes}>
         <label>Nombre de la mascota</label>
         <input
