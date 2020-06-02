@@ -40,7 +40,12 @@ label {
   font-size: 20px;
   display: flex;
 }
-
+ 
+.error-text {
+  font-size: 14px;
+  color: #fff;
+  background-color: #e84a5f;
+}
 
 input[type="date"],
 input[type="time"] {
