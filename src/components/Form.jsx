@@ -57,7 +57,7 @@ const Form = ({ createQuotes }) => {
 
   return (
     <React.Fragment>
-      <h2>Crear Citas</h2>
+      <h3>Crear Citas</h3>
       {error && (
         <p className="error-text">Todos los campos son obligatorios. </p>
       )}
