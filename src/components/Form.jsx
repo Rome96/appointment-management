@@ -45,7 +45,14 @@ const Form = ({ createQuotes }) => {
     //create Quotes
     createQuotes(quote)
 
-    
+    //Reset from
+    setQuote({
+      hora: "",
+      fecha: "",
+      mascota: "",
+      sintomas: "",
+      propietario: "",
+    })
   };
 
   return (
