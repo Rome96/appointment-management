@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
 import Form from './components/Form'
 import Quote from './components/Quote'
-function App() {
 
+
+const RenderQuote = (quotes) => (
+  quotes.map(quote => (
+    <Quote
+      key={quote.id}
+      quote={quote}
+    />
+  ))
+)
+
+function App() {
   const [ quotes, setQuotes ] = useState([])
 
   const createQuotes = (quote) => {
@@ -13,15 +23,6 @@ function App() {
     ])
   }
 
-  const RenderQuote = (
-    quotes.map(quote => (
-      <Quote
-        key={quote.id}
-        quote={quote}
-      />
-    ))
-  )
-  
  console.log('Array quotes:', quotes)
   return (
     <React.Fragment>
@@ -35,7 +36,7 @@ function App() {
           </div>
           <div className='one-half column'>
             <h3>Administra tus citas</h3>
-            { RenderQuote }
+            { RenderQuote(quotes) }
           </div>
         </div>
       </div>
