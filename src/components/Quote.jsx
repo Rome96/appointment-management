@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Quote = ({ quote }) => {
-  const { mascota, propietario, fecha, hora, sintomas } = quote
+const Quote = ({ quote, deleteQuotes }) => {
+  const { mascota, propietario, fecha, hora, sintomas, id } = quote
   return (
     <div className='cita'>
       <p>Mascota: <span>{mascota}</span></p>
@@ -9,7 +9,12 @@ const Quote = ({ quote }) => {
       <p>Fecha: <span>{fecha}</span></p>
       <p>Hora: <span>{hora}</span></p>
       <p>Sintomas: <span>{sintomas}</span></p>
-
+      <button
+        className='button eliminar u-full-width'
+        onClick={() => deleteQuotes(id)}
+      >
+        eliminar &times;
+      </button>
     </div>
   );
 }
