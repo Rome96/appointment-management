@@ -70,6 +70,7 @@ input[type="time"] {
   border-bottom: 1px solid #e1e1e1;
   color: black;
   margin-bottom: 2px;
+  word-wrap: break-word;
 }
 
 .cita p {
