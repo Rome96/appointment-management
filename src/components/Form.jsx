@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
+import PropTypes from 'prop-types'
 
 const Form = ({ createQuotes }) => {
 
@@ -110,5 +111,9 @@ const Form = ({ createQuotes }) => {
     </React.Fragment>
   );
 };
+
+Form.propTypes = {
+  createQuotes: PropTypes.func.isRequired
+}
 
 export default Form;

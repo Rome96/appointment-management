@@ -23,6 +23,7 @@ function App() {
 
   // useEffect para realizar ciertas operaciones cuando el state cambia
   useEffect(() => {
+    let initialQuotes = JSON.parse(localStorage.getItem("quotes"));
     initialQuotes
       ? localStorage.setItem("quotes", JSON.stringify(quotes))
       : localStorage.setItem("quotes", JSON.stringify([]));
